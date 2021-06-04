@@ -21,7 +21,6 @@ public class Game implements Serializable {
     }
 
     public Game(int choice){
-
         this.choice = choice;
     }
 
