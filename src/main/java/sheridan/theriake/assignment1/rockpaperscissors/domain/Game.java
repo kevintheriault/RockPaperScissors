@@ -1,5 +1,9 @@
 package sheridan.theriake.assignment1.rockpaperscissors.domain;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import sheridan.theriake.assignment1.rockpaperscissors.controller.Routing;
+
 import java.io.Serializable;
 import java.util.Random;
 import javax.validation.constraints.Max;
@@ -20,6 +24,8 @@ public class Game implements Serializable {
 
     private Random random = new Random();
 
+    private final Logger logger = LoggerFactory.getLogger(Routing.class);
+
     public Game() {
     }
 
@@ -33,6 +39,7 @@ public class Game implements Serializable {
     }
 
     public void setChoice(int choice) {
+        logger.trace("setChoice was called");
         this.choice = choice;
     }
 
@@ -41,7 +48,8 @@ public class Game implements Serializable {
     }
 
     public void setComputer(int computer) {
-        this.computer = random.nextInt(3);
+        this.computer = random.nextInt(2);
+        logger.trace("setComputer was called value:" + getComputer());
     }
 
     @Override
