@@ -9,9 +9,16 @@
 </head>
 <body>
 <h1>TESTING</h1>
-
 <div class="game_form">
 <form action="Output.html" th:action="@{Output}" th:object="${game}">
+
+    <div th:if="${#fields.hasErrors('*')}">
+        <h3 class="error">Input Errors</h3>
+        <ul>
+            <li class="error" th:each="e: ${#fields.errors('*')}" th:text="${e}">Input Error</li>
+        </ul>
+    </div>
+
     <label><input type="radio" th:field="*{choice}" th:value="0">Rock</label>
     <label><input type="radio" th:field="*{choice}" th:value="1">Paper</label>
     <label><input type="radio" th:field="*{choice}" th:value="2">Scissors</label><br>
