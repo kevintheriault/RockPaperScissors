@@ -12,7 +12,6 @@ import sheridan.theriake.assignment1.rockpaperscissors.domain.Game;
 public class Routing {
     @GetMapping("/Input")
     public ModelAndView input() {
-//        return "Input";
         return new ModelAndView("Input", "game", new Game());
     }
 
