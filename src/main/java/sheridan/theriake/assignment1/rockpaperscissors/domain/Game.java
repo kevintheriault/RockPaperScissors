@@ -13,6 +13,7 @@ public class Game implements Serializable {
     private int computer;
     private boolean win;
     private boolean tie;
+    private boolean loss;
 
     private Random random = new Random();
 
@@ -48,7 +49,7 @@ public class Game implements Serializable {
         return tie;
     }
 
-    public void winOrLose(int choice, int computer){
+    public void winOrLose(){
         if(getChoice() == getComputer()){
             tie = true;
         }else if(getChoice() == 0 && getComputer() == 2){
@@ -58,7 +59,7 @@ public class Game implements Serializable {
         }else if(getChoice() == 2 && getComputer() == 1){
             win = true;
         }else{
-            win = false;
+            loss = true;
         }
     }
 

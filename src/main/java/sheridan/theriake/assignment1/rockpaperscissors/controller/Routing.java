@@ -32,6 +32,8 @@ public class Routing {
             return new ModelAndView("Input");
         }
 
+        game.winOrLose();
+
         return new ModelAndView("Output", "game", game);
 
     }
