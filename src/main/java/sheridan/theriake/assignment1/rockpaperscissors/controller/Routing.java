@@ -25,15 +25,17 @@ public class Routing {
     public ModelAndView output(@Validated @ModelAttribute Game game,
                                BindingResult bindingResult) {
         logger.trace("output() is called");
-        logger.debug("Game" + game);
+        logger.debug("GAME " + game);
 
         if(bindingResult.hasErrors()){
             logger.trace("ERROR DETECTED");
             return new ModelAndView("Input");
         }
 
+        logger.trace("Checking win conditions");
         game.winOrLose();
 
+        logger.trace(game.isWin() ? "Win" : game.isLoss() ?  "Loss" : "Tie");
         return new ModelAndView("Output", "game", game);
 
     }

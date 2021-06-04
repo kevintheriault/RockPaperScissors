@@ -1,5 +1,8 @@
 package sheridan.theriake.assignment1.rockpaperscissors.domain;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.Serializable;
 import java.util.Random;
 import javax.validation.constraints.Max;
@@ -17,12 +20,11 @@ public class Game implements Serializable {
 
     private Random random = new Random();
 
-    public Game() {
-        this.computer = random.nextInt(3); // Default constructor makes computer choice.
-    }
+    private final Logger logger = LoggerFactory.getLogger(Game.class);
 
-    public Game(int choice){
-        this.choice = choice;
+    public Game() {
+        logger.trace("Game initialized");
+        this.computer = random.nextInt(3); // Default constructor makes computer choice.
     }
 
     public int getChoice() {
@@ -38,7 +40,8 @@ public class Game implements Serializable {
     }
 
     public void setComputer(int computer) {
-         this.computer = computer;
+        logger.trace("setComputer() called.");
+        this.computer = computer;
     }
 
     public boolean isWin() {
