@@ -41,7 +41,7 @@ public class Game implements Serializable {
     }
 
     public void setComputer(int computer) {
-        this.computer = random.nextInt(2);
+        this.computer = random.nextInt(3);
     }
 
     @Override
