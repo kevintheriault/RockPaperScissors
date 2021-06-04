@@ -15,7 +15,7 @@ public class Game implements Serializable {
     public Game() {
     }
 
-    public Game(String choice){
+    public Game(int choice){
         this.choice = choice;
     }
 

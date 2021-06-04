@@ -8,7 +8,7 @@ import sheridan.theriake.assignment1.rockpaperscissors.domain.Game;
 @Controller
 public class Routing {
     @GetMapping("/Input")
-    public String input(){
+    public ModelAndView input(){
 //        return "Input";
         return new ModelAndView("Input", "game", new Game());
     }
