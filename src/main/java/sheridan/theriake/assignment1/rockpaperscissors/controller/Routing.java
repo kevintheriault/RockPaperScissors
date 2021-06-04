@@ -2,12 +2,14 @@ package sheridan.theriake.assignment1.rockpaperscissors.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Routing {
     @GetMapping("/Input")
     public String input(){
-        return "Input";
+//        return "Input";
+        return new ModelAndView("Input", "game", new Game());
     }
 
     @GetMapping("/Output")
