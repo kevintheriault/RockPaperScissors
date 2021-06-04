@@ -10,8 +10,9 @@
     <title>Input - Rock Paper Scissors</title>
 </head>
 <body>
-<h1>TESTING</h1>
 <div class="game_form">
+    <h1>Rock, Paper, Scissors!</h1>
+    <p>Make your selection:</p>
 <form action="Output.html" th:action="@{Output}" th:object="${game}">
 
     <div th:if="${#fields.hasErrors('*')}">
@@ -21,9 +22,9 @@
         </ul>
     </div>
 
-    <label><input type="radio" th:field="*{choice}" th:value="0">Rock</label>
-    <label><input type="radio" th:field="*{choice}" th:value="1">Paper</label>
-    <label><input type="radio" th:field="*{choice}" th:value="2">Scissors</label><br>
+    <label class="rock"><input type="radio" th:field="*{choice}" th:value="0"></label>
+    <label class="paper"><input type="radio" th:field="*{choice}" th:value="1"></label>
+    <label class="scissors"><input type="radio" th:field="*{choice}" th:value="2"></label><br>
     <input type="submit" value="PLAY">
 </form>
 </div>
