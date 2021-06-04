@@ -47,8 +47,8 @@ public class Game implements Serializable {
         return computer;
     }
 
-    public void setComputer(int computer) {
-        this.computer = random.nextInt(2);
+    public void setComputer() {
+        this.computer = random.nextInt(3); // the bound for random nums has uses less than.
         logger.trace("setComputer was called value:" + getComputer());
     }
 

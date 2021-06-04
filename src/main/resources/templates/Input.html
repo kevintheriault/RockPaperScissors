@@ -15,7 +15,7 @@
     <label><input type="radio" th:field="*{choice}" th:value="0">Rock</label>
     <label><input type="radio" th:field="*{choice}" th:value="1">Paper</label>
     <label><input type="radio" th:field="*{choice}" th:value="2">Scissors</label><br>
-    <input type="hidden" th:field="*{computer}" th:value="${game.setComputer(1)}" >
+    <input type="hidden" th:field="*{computer}" th:value="${game.setComputer()}" >
     <input type="submit" value="PLAY">
 </form>
 </div>
