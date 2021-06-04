@@ -29,6 +29,7 @@ public class Routing {
             return new ModelAndView("Input");
         }
 
+        game.setComputer();
         return new ModelAndView("Output", "game", game);
     }
 }

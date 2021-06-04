@@ -29,7 +29,7 @@ public class Game implements Serializable {
     public Game() {
     }
 
-    public Game(int choice, int computer){
+    public Game(int choice){
         this.choice = choice;
         this.computer = computer;
     }
@@ -47,7 +47,7 @@ public class Game implements Serializable {
         return computer;
     }
 
-    public void setComputer(int computer) {
+    public void setComputer() {
         this.computer = random.nextInt(3); // the bound for random nums has uses less than.
         logger.trace("setComputer was called value:" + getComputer());
     }
