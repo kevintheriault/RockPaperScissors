@@ -8,6 +8,17 @@
     <title>Output - Rock Paper Scissors</title>
 </head>
 <body>
-<h1>TESTING OUTPUT</h1>
+<h1>Game Result</h1>
+<div th:switch="${game.getChoice()}">
+    Your choice: <span th:case="0">Rock</span>
+                 <span th:case="1">Paper</span>
+                 <span th:case="2">Scissors</span><br>
+
+    Computers choice: <br>
+    WINS! <br>
+
+    <div class = "button">Play Again!</div>
+</div>
+
 </body>
 </html>
