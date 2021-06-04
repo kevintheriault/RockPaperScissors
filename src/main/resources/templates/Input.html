@@ -9,5 +9,11 @@
 </head>
 <body>
 <h1>TESTING</h1>
+<form action="Output.html" th:action="@{Process}" th:object="${game}">
+    <label><input type="radio" th:field="*{move}" th:value="0">Rock</label>
+    <label><input type="radio" th:field="*{move}" th:value="1">Paper</label>
+    <label><input type="radio" th:field="*{move}" th:value="2">Scissors</label>
+
+</form>
 </body>
 </html>
