@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -20,8 +20,8 @@
                       <span th:case="1">Paper</span>
                       <span th:case="2">Scissors</span><br>
 </div>
-<div>
-    WINS! <br>
+
+<div th:text="${game.isTie()} ? 'It was a TIE!' : ${game.isWin()} ? 'You won!' : 'Computer won!'" ><br>
 
     <div class = "button">Play Again!</div>
 </div>

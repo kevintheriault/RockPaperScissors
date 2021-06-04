@@ -4,15 +4,15 @@ import java.io.Serializable;
 import java.util.Random;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 
 public class Game implements Serializable {
 
     @Min(0)
     @Max(2)
-    @NotBlank
     private int choice;
     private int computer;
+    private boolean win;
+    private boolean tie;
 
     private Random random = new Random();
 
@@ -38,6 +38,28 @@ public class Game implements Serializable {
 
     public void setComputer(int computer) {
          this.computer = computer;
+    }
+
+    public boolean isWin() {
+        return win;
+    }
+
+    public boolean isTie() {
+        return tie;
+    }
+
+    public void winOrLose(int choice, int computer){
+        if(getChoice() == getComputer()){
+            tie = true;
+        }else if(getChoice() == 0 && getComputer() == 2){
+            win = true;
+        }else if(getChoice() == 1 && getComputer() == 0){
+            win = true;
+        }else if(getChoice() == 2 && getComputer() == 1){
+            win = true;
+        }else{
+            win = false;
+        }
     }
 
     @Override

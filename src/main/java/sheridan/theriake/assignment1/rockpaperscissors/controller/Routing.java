@@ -26,10 +26,13 @@ public class Routing {
                                BindingResult bindingResult) {
         logger.trace("output() is called");
         logger.debug("Game" + game);
+
         if(bindingResult.hasErrors()){
+            logger.trace("ERROR DETECTED");
             return new ModelAndView("Input");
         }
 
         return new ModelAndView("Output", "game", game);
+
     }
 }
