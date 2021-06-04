@@ -23,7 +23,7 @@
 
 <div th:if="${game.isTie()}">Game was a tie!</div>
 <div th:if="${game.isWin()}">You won!</div>
-<div th:unless="${game.isWin()} && ${game.isTie()}">Computer won!</div>
+<div th:if="${game.isLoss}">Computer won!</div>
 <br>
 
 <a href="Input.html" class="button">Play Again!</a>

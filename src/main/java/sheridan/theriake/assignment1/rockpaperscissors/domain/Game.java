@@ -11,9 +11,9 @@ public class Game implements Serializable {
     @Max(2)
     private int choice;
     private int computer;
-    private boolean win;
-    private boolean tie;
-    private boolean loss;
+    private boolean win = false;
+    private boolean tie = false;
+    private boolean loss = false;
 
     private Random random = new Random();
 
@@ -43,6 +43,10 @@ public class Game implements Serializable {
 
     public boolean isWin() {
         return win;
+    }
+
+    public boolean isLoss() {
+        return loss;
     }
 
     public boolean isTie() {
