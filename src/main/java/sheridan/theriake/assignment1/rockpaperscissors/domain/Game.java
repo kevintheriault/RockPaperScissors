@@ -25,7 +25,7 @@ public class Game implements Serializable {
 
     public Game(int choice){
         this.choice = choice;
-        this.computer = random.nextInt(2);
+        this.computer = computer;
     }
 
     public int getChoice() {
@@ -41,7 +41,7 @@ public class Game implements Serializable {
     }
 
     public void setComputer(int computer) {
-        this.computer = computer;
+        this.computer = random.nextInt(2);
     }
 
     @Override
