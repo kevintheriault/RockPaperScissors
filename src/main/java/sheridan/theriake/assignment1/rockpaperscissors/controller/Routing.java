@@ -25,11 +25,11 @@ public class Routing {
     public ModelAndView output(@Validated @ModelAttribute Game game,
                                BindingResult bindingResult) {
         logger.trace("output() is called");
+        logger.debug("Game" + game);
         if(bindingResult.hasErrors()){
             return new ModelAndView("Input");
         }
 
-        game.setComputer();
         return new ModelAndView("Output", "game", game);
     }
 }
