@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
 import sheridan.theriake.assignment1.rockpaperscissors.domain.Game;
 
+import java.util.Random;
+
 @Controller
 public class Routing {
     @GetMapping("/Input")
@@ -16,10 +18,12 @@ public class Routing {
     }
 
     @GetMapping("/Output")
-    public ModelAndView output(@Validated @ModelAttribute Game game, BindingResult bindingResult) {
+    public ModelAndView output(@Validated @ModelAttribute Game game,
+                               BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
             return new ModelAndView("Input");
         }
+
         return new ModelAndView("Output", "game", game);
     }
 }

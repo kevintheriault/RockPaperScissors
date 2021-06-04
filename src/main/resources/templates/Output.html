@@ -13,8 +13,14 @@
     Your choice: <span th:case="0">Rock</span>
                  <span th:case="1">Paper</span>
                  <span th:case="2">Scissors</span><br>
+</div>
 
-    Computers choice: <br>
+<div th:switch="${game.getComputer()}">
+    Computers choice: <span th:case="0">Rock</span>
+                      <span th:case="0">Rock</span>
+                      <span th:case="0">Rock</span><br>
+</div>
+<div>
     WINS! <br>
 
     <div class = "button">Play Again!</div>
