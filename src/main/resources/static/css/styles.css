@@ -13,48 +13,35 @@ label, input,h1,h3,p{
 }
 
 /*This controls the appearance of the radio buttons -- makes them images */
-.choices input{
+.game_radio input{
     appearance:none;
 }
-
 .rock{
     background-image: url(/images/rock.png);
-    cursor:pointer;
-    background-size:contain;
-    display:inline-block;
-    width:70px;
-    height:70px;
-    transition: all 100ms ease-in;
-    filter: brightness(50%) opacity(.7);
 }
-
 .paper{
     background-image: url(/images/paper.png);
-    cursor:pointer;
-    background-size:contain;
-    display:inline-block;
-    width:70px;
-    height:70px;
-    transition: all 100ms ease-in;
-    filter: brightness(50%) opacity(.7);
 }
-
 .scissors{
     background-image: url(/images/scissors.png);
+}
+
+.choice{
     cursor:pointer;
     background-size:contain;
     display:inline-block;
     width:70px;
     height:70px;
     transition: all 100ms ease-in;
-    filter: brightness(50%) opacity(.7);
+    filter: brightness(30%) opacity(.7);
+    backgroun-repeat: no-repeat;
 }
 
 .rock:hover, .paper:hover, .scissors:hover{
-    filter: brightness(75)
+    filter: brightness(50%) opacity(.8);
 }
 
-.selected{
+.game_radio input:checked + .choice{
     filter: none;
 }
 

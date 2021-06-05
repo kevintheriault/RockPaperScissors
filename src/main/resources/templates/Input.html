@@ -22,15 +22,15 @@
         </ul>
     </div>
 
-<div class="choices">
+<div class="game_radio">
     <input type="radio" th:field="*{choice}" th:value="0">
-    <label th:for="${#ids.prev('choice')}" class="rock"></label>
+    <label th:for="${#ids.prev('choice')}" class="choice rock"></label>
 
     <input type="radio" th:field="*{choice}" th:value="1">
-    <label th:for="${#ids.prev('choice')}" class="paper"></label>
+    <label th:for="${#ids.prev('choice')}" class="choice paper"></label>
 
     <input type="radio" th:field="*{choice}" th:value="2">
-    <label th:for="${#ids.prev('choice')}" class="scissors"></label>
+    <label th:for="${#ids.prev('choice')}" class="choice scissors"></label>
 </div>
 
     <input type="submit" value="PLAY">
