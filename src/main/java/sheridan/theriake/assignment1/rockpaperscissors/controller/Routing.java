@@ -15,7 +15,7 @@ public class Routing {
 
     private final Logger logger = LoggerFactory.getLogger(Routing.class);
 
-    @GetMapping("/Input")
+    @GetMapping(value={"/", "/Input"})
     public ModelAndView input() {
         logger.trace("input() is called");
         return new ModelAndView("Input", "game", new Game());
