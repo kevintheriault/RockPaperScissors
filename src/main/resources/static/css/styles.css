@@ -4,51 +4,54 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFF1D0;
     color: #02020B;
-    text-align:center;
+    text-align: center;
     margin-top: 50px;
 }
 
-label, input,h1,h3,p,.error{
+label, input, h1, h3, p, .error {
     margin: 0;
     padding: 0;
 }
 
-.error{
+.error {
     color: #D36135;
     list-style-position: inside;
     width: auto;
 }
 
 /*This controls the appearance of the radio buttons -- makes them images */
-.game_radio input{
-    appearance:none;
+.game_radio input {
+    appearance: none;
 }
-.rock{
+
+.rock {
     background-image: url(/images/rock.png);
 }
-.paper{
+
+.paper {
     background-image: url(/images/paper.png);
 }
-.scissors{
+
+.scissors {
     background-image: url(/images/scissors.png);
 }
 
-.choice{
-    cursor:pointer;
-    background-size:contain;
-    display:inline-block;
-    width:70px;
-    height:70px;
+.choice {
+    cursor: pointer;
+    background-size: contain;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
     transition: all 100ms ease-in;
     filter: brightness(50%) opacity(.5);
     background-repeat: no-repeat;
 }
 
-.rock:hover, .paper:hover, .scissors:hover{
+.rock:hover, .paper:hover, .scissors:hover {
     filter: brightness(80%) opacity(.8);
 }
 
-.game_radio input:checked + .choice{
+.game_radio input:checked + .choice {
     filter: none;
 }
 
@@ -65,26 +68,28 @@ p {
 }
 
 /*OUTPUT PAGE STYLES*/
-.results_table{
+.results_table {
     margin-left: auto;
     margin-right: auto;
 }
 
-.output_image{
+.output_image {
     width: 100px;
     height: auto;
 }
 
-.win_lose_tie{
+.win_lose_tie {
     font-weight: 600;
 }
 
-.win{
+.win {
     color: #7FB069;
 }
-.lose{
+
+.lose {
     color: #D36135;
 }
-.tie{
+
+.tie {
     color: #02020B;
 }

@@ -13,28 +13,28 @@
 <div class="game_form">
     <h1>Rock, Paper, Scissors!</h1>
     <p>Make your selection:</p>
-<form action="Output.html" th:action="@{Output}" th:object="${game}">
+    <form action="Output.html" th:action="@{Output}" th:object="${game}">
 
-    <div th:if="${#fields.hasErrors('*')}">
-        <h3 class="error">Input Errors</h3>
-        <ul>
-            <li class="error" th:each="e: ${#fields.errors('*')}" th:text="${e}"></li>
-        </ul>
-    </div>
+        <div th:if="${#fields.hasErrors('*')}">
+            <h3 class="error">Input Errors</h3>
+            <ul>
+                <li class="error" th:each="e: ${#fields.errors('*')}" th:text="${e}"></li>
+            </ul>
+        </div>
 
-<div class="game_radio">
-    <input type="radio" th:field="*{choice}" th:value="0">
-    <label th:for="${#ids.prev('choice')}" class="choice rock"></label>
+        <div class="game_radio">
+            <input type="radio" th:field="*{choice}" th:value="0">
+            <label th:for="${#ids.prev('choice')}" class="choice rock"></label>
 
-    <input type="radio" th:field="*{choice}" th:value="1">
-    <label th:for="${#ids.prev('choice')}" class="choice paper"></label>
+            <input type="radio" th:field="*{choice}" th:value="1">
+            <label th:for="${#ids.prev('choice')}" class="choice paper"></label>
 
-    <input type="radio" th:field="*{choice}" th:value="2">
-    <label th:for="${#ids.prev('choice')}" class="choice scissors"></label>
-</div>
+            <input type="radio" th:field="*{choice}" th:value="2">
+            <label th:for="${#ids.prev('choice')}" class="choice scissors"></label>
+        </div>
 
-    <input type="submit" value="PLAY">
-</form>
+        <input type="submit" value="PLAY">
+    </form>
 </div>
 </body>
 </html>

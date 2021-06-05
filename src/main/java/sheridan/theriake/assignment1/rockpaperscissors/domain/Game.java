@@ -56,16 +56,16 @@ public class Game implements Serializable {
         return tie;
     }
 
-    public void winOrLose(){
-        if(getChoice() == getComputer()){
+    public void winOrLose() {
+        if (getChoice() == getComputer()) {
             tie = true;
-        }else if(getChoice() == 0 && getComputer() == 2){
+        } else if (getChoice() == 0 && getComputer() == 2) {
             win = true;
-        }else if(getChoice() == 1 && getComputer() == 0){
+        } else if (getChoice() == 1 && getComputer() == 0) {
             win = true;
-        }else if(getChoice() == 2 && getComputer() == 1){
+        } else if (getChoice() == 2 && getComputer() == 1) {
             win = true;
-        }else{
+        } else {
             loss = true;
         }
     }

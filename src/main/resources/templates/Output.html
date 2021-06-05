@@ -15,7 +15,7 @@
     <thead>
     <tr>
         <th>Your Choice!</th>
-        <th> </th>
+        <th></th>
         <th>Computer!</th>
     </tr>
     </thead>
@@ -26,7 +26,7 @@
             <span th:case="1"><img class="output_image" src="/images/paper.png"></span>
             <span th:case="2"><img class="output_image" src="/images/scissors.png"></span>
         </td>
-        <td> </td>
+        <td></td>
         <td th:switch="${game.getComputer()}">
             <span th:case="0"><img class="output_image" src="/images/rock.png"></span>
             <span th:case="1"><img class="output_image" src="/images/paper.png"></span>

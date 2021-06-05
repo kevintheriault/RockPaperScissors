@@ -15,7 +15,7 @@ public class Routing {
 
     private final Logger logger = LoggerFactory.getLogger(Routing.class);
 
-    @GetMapping(value={"/", "/Input"})
+    @GetMapping(value = {"/", "/Input"})
     public ModelAndView input() {
         logger.trace("input() is called");
         return new ModelAndView("Input", "game", new Game());
@@ -27,7 +27,7 @@ public class Routing {
         logger.trace("output() is called");
         logger.debug("GAME " + game);
 
-        if(bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             logger.trace("ERROR DETECTED");
             return new ModelAndView("Input");
         }
@@ -35,7 +35,7 @@ public class Routing {
         logger.trace("Checking win conditions");
         game.winOrLose();
 
-        logger.trace(game.isWin() ? "Win" : game.isLoss() ?  "Loss" : "Tie");
+        logger.trace(game.isWin() ? "Win" : game.isLoss() ? "Loss" : "Tie");
         return new ModelAndView("Output", "game", game);
 
     }
