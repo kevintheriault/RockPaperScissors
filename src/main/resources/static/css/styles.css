@@ -7,9 +7,16 @@ body {
     text-align:center;
     margin-top: 50px;
 }
-label, input,h1,h3,p{
+
+label, input,h1,h3,p,.error{
     margin: 0;
     padding: 0;
+}
+
+.error{
+    color: #D36135;
+    list-style-position: inside;
+    width: auto;
 }
 
 /*This controls the appearance of the radio buttons -- makes them images */
@@ -33,12 +40,12 @@ label, input,h1,h3,p{
     width:70px;
     height:70px;
     transition: all 100ms ease-in;
-    filter: brightness(30%) opacity(.7);
-    backgroun-repeat: no-repeat;
+    filter: brightness(50%) opacity(.5);
+    background-repeat: no-repeat;
 }
 
 .rock:hover, .paper:hover, .scissors:hover{
-    filter: brightness(50%) opacity(.8);
+    filter: brightness(80%) opacity(.8);
 }
 
 .game_radio input:checked + .choice{
