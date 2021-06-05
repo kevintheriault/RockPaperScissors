@@ -3,7 +3,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFF1D0;
-    color: #000000;
+    color: #02020B;
     text-align:center;
     margin-top: 50px;
 }
@@ -12,10 +12,7 @@ label, input,h1,h3,p,.error{
     margin: 0;
     padding: 0;
 }
-.results{
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .error{
     color: #D36135;
     list-style-position: inside;
@@ -55,32 +52,39 @@ label, input,h1,h3,p,.error{
     filter: none;
 }
 
-h1
-{
+h1 {
     font-size: 2.2em;
 }
 
-h2
-{
-    font-size: 2.0em;
-}
-
-h3
-{
+h3 {
     font-size: 1.8em;
 }
 
-h4
-{
-    font-size: 1.6em;
-}
-
-h5
-{
-    font-size: 1.4em;
-}
-
-p
-{
+p {
     font-size: 1.2em;
+}
+
+/*OUTPUT PAGE STYLES*/
+.results_table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.output_image{
+    width: 100px;
+    height: auto;
+}
+
+.win_lose_tie{
+    font-weight: 600;
+}
+
+.win{
+    color: #7FB069;
+}
+.lose{
+    color: #D36135;
+}
+.tie{
+    color: #02020B;
 }

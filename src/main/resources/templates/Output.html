@@ -11,32 +11,34 @@
 <body>
 <h1>Game Result</h1>
 
-<table class="results">
+<table class="results_table">
     <thead>
     <tr>
         <th>Your Choice!</th>
-        <th>Computers Choice!</th>
+        <th> </th>
+        <th>Computer!</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td th:switch="${game.getChoice()}">
-            <span th:case="0">Rock</span>
-            <span th:case="1">Paper</span>
-            <span th:case="2">Scissors</span>
+            <span th:case="0"><img class="output_image" src="/images/rock.png"></span>
+            <span th:case="1"><img class="output_image" src="/images/paper.png"></span>
+            <span th:case="2"><img class="output_image" src="/images/scissors.png"></span>
         </td>
+        <td> </td>
         <td th:switch="${game.getComputer()}">
-            <span th:case="0">Rock</span>
-            <span th:case="1">Paper</span>
-            <span th:case="2">Scissors</span>
+            <span th:case="0"><img class="output_image" src="/images/rock.png"></span>
+            <span th:case="1"><img class="output_image" src="/images/paper.png"></span>
+            <span th:case="2"><img class="output_image" src="/images/scissors.png"></span>
         </td>
     </tr>
     </tbody>
 </table>
 
-<div th:if="${game.isTie()}">Game was a tie!</div>
-<div th:if="${game.isWin()}">You won!</div>
-<div th:if="${game.isLoss}">Computer won!</div>
+<div class="win_lose_tie tie" th:if="${game.isTie()}">Game was a tie!</div>
+<div class="win_lose_tie win" th:if="${game.isWin()}">You won!</div>
+<div class="win_lose_tie lose" th:if="${game.isLoss}">Computer won!</div>
 <br>
 
 <a th:href="Input" class="button">Play Again!</a>
