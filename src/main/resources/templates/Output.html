@@ -10,17 +10,29 @@
 </head>
 <body>
 <h1>Game Result</h1>
-<div th:switch="${game.getChoice()}">
-    Your choice: <span th:case="0">Rock</span>
-    <span th:case="1">Paper</span>
-    <span th:case="2">Scissors</span><br>
-</div>
 
-<div th:switch="${game.getComputer()}">
-    Computers choice: <span th:case="0">Rock</span>
-    <span th:case="1">Paper</span>
-    <span th:case="2">Scissors</span><br>
-</div>
+<table class="results">
+    <thead>
+    <tr>
+        <th>Your Choice!</th>
+        <th>Computers Choice!</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:switch="${game.getChoice()}">
+            <span th:case="0">Rock</span>
+            <span th:case="1">Paper</span>
+            <span th:case="2">Scissors</span>
+        </td>
+        <td th:switch="${game.getComputer()}">
+            <span th:case="0">Rock</span>
+            <span th:case="1">Paper</span>
+            <span th:case="2">Scissors</span>
+        </td>
+    </tr>
+    </tbody>
+</table>
 
 <div th:if="${game.isTie()}">Game was a tie!</div>
 <div th:if="${game.isWin()}">You won!</div>

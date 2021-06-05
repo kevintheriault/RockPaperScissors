@@ -12,7 +12,10 @@ label, input,h1,h3,p,.error{
     margin: 0;
     padding: 0;
 }
-
+.results{
+    margin-left: auto;
+    margin-right: auto;
+}
 .error{
     color: #D36135;
     list-style-position: inside;
