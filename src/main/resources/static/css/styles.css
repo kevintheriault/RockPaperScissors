@@ -12,6 +12,11 @@ label, input,h1,h3,p{
     padding: 0;
 }
 
+/*This controls the appearance of the radio buttons -- makes them images */
+.choices input{
+    appearance:none;
+}
+
 .rock{
     background-image: url(/images/rock.png);
     cursor:pointer;
@@ -46,11 +51,11 @@ label, input,h1,h3,p{
 }
 
 .rock:hover, .paper:hover, .scissors:hover{
-    filter: brightness(100)
+    filter: brightness(75)
 }
 
-.game_form input{
-    appearance:none;
+.selected{
+    filter: none;
 }
 
 h1

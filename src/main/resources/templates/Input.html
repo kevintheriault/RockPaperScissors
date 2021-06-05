@@ -22,9 +22,17 @@
         </ul>
     </div>
 
-    <label class="rock"><input type="radio" th:field="*{choice}" th:value="0"></label>
-    <label class="paper"><input type="radio" th:field="*{choice}" th:value="1"></label>
-    <label class="scissors"><input type="radio" th:field="*{choice}" th:value="2"></label><br>
+<div class="choices">
+    <input type="radio" th:field="*{choice}" th:value="0">
+    <label th:for="${#ids.prev('choice')}" class="rock"></label>
+
+    <input type="radio" th:field="*{choice}" th:value="1">
+    <label th:for="${#ids.prev('choice')}" class="paper"></label>
+
+    <input type="radio" th:field="*{choice}" th:value="2">
+    <label th:for="${#ids.prev('choice')}" class="scissors"></label>
+</div>
+
     <input type="submit" value="PLAY">
 </form>
 </div>
